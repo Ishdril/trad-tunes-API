@@ -1,10 +1,14 @@
-import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
+import { Entity, Property, Unique } from '@mikro-orm/core';
+import { Base } from './BaseEntity';
 
 @Entity()
-export class Country {
-  @PrimaryKey()
-  id!: number;
-
+export class Country extends Base<Country> {
   @Property()
-  country!: string;
+  @Unique()
+  country: string;
+
+  constructor(country: string) {
+    super();
+    this.country = country;
+  }
 }
