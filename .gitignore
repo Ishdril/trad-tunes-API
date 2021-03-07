@@ -105,3 +105,6 @@ dist
 
 # VSCode
 *.code-workspace
+
+# Migrations
+src/migrations/*
