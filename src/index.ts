@@ -14,7 +14,7 @@ export let orm = {} as MikroORM;
 
 const main = async () => {
   orm = await MikroORM.init(ormConfig);
-  // await orm.getMigrator().createMigration();
+  // await orm.getMigrator().createInitialMigration();
   await orm.getMigrator().up();
 
   app.use(morgan('dev'));
