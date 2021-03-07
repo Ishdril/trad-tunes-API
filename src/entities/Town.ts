@@ -3,16 +3,16 @@ import { Base } from './BaseEntity';
 import { Origin } from './Origin';
 
 @Entity()
-export class Country extends Base<Country> {
+export class Town extends Base<Town> {
   @Property()
   @Unique()
-  country: string;
+  town: string;
 
-  @OneToMany(() => Origin, o => o.country)
+  @OneToMany(() => Origin, o => o.town)
   origins = new Collection<Origin>(this);
 
-  constructor(country: string) {
+  constructor(town: string) {
     super();
-    this.country = country;
+    this.town = town;
   }
 }
