@@ -1,7 +1,9 @@
 import express from 'express';
+import { getOrigins, postOrigin } from '../controllers';
 
 const router = express.Router();
 
-router.get('/', (_, res) => res.send('<h1>Hi </h1>'));
+router.get('/origins', getOrigins);
+router.post('/origins', postOrigin);
 
 export default router;
