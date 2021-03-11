@@ -1,6 +1,6 @@
 import { Collection, Entity, OneToMany, Property, Unique } from '@mikro-orm/core';
 import { Base } from './BaseEntity';
-import { Origin } from './Origin';
+import { Origin } from '.';
 
 @Entity()
 export class Country extends Base<Country> {

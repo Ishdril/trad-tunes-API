@@ -1,6 +1,5 @@
 import { Collection, Entity, OneToMany, Property, Unique } from '@mikro-orm/core';
-import { Base } from './BaseEntity';
-import { Origin } from './Origin';
+import { Base, Origin } from '.';
 
 @Entity()
 export class Town extends Base<Town> {
